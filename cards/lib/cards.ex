@@ -1,0 +1,23 @@
+defmodule Cards do
+  # def start(_type, _args) do
+  #   IO.puts(Cards.shuffle(deck))
+  #   Supervisor.start_link([], strategy: :one_for_one)
+  # end
+
+  def create_deck do
+    ["Ace", "Two", "Three"]
+  end
+
+  def shuffle(deck) do
+    Enum.shuffle(deck)
+  end
+
+  def contains?(deck, card) do
+    Enum.member?(deck, card)
+  end
+end
+
+# deck = Cards.create_deck()
+# shuffle = Cards.shuffle(deck)
+
+# IO.inspect(shuffle)
