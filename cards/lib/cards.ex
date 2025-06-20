@@ -42,8 +42,3 @@ defmodule Cards do
     end
   end
 end
-
-# deck = Cards.create_deck()
-# shuffle = Cards.shuffle(deck)
-
-# IO.inspect(shuffle)
