@@ -1,4 +1,8 @@
 defmodule Cards do
+  @moduledoc """
+     Provides methods of creating and handling deck of cards
+  """
+
   # def start(_type, _args) do
   #   IO.puts(Cards.shuffle(deck))
   #   Supervisor.start_link([], strategy: :one_for_one)
