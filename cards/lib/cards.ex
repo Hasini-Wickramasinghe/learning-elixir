@@ -1,6 +1,6 @@
 defmodule Cards do
   @moduledoc """
-     Provides methods of creating and handling deck of cards
+    Provides methods of creating and handling deck of cards
   """
 
   # def start(_type, _args) do
@@ -8,6 +8,9 @@ defmodule Cards do
   #   Supervisor.start_link([], strategy: :one_for_one)
   # end
 
+  @doc """
+    creating a deck of cards
+  """
   def create_deck do
     values = ["Ace", "Two", "Three", "Four", "Five"]
     suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
@@ -28,6 +31,17 @@ defmodule Cards do
     Enum.member?(deck, card)
   end
 
+  @doc """
+    Divides the deck in to a hand and remainder of the deck.
+    The `hand_size` argument defines how many cards should be in the hand.
+
+  ## Examples
+        iex> deck = Cards.create_deck
+        iex> {hand, deck} = Cards.deal(deck, 1)
+        iex> hand
+        ["Ace of Spades"]
+
+  """
   def deal(deck, hand_size) do
     Enum.split(deck, hand_size)
   end
