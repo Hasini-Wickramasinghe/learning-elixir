@@ -9,6 +9,6 @@ defmodule CardsTest do
 
   test "shuffle card deck shouldnt be same as the 1st card deck" do
     deck = Cards.create_deck()
-    assert deck != Cards.shuffle(deck)
+    refute deck == Cards.shuffle(deck)
   end
 end
