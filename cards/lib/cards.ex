@@ -31,9 +31,11 @@ defmodule Cards do
     Determin if the deck has the given card.
 
   ## Examples
+
         iex> deck = Cards.create_deck
         iex> Cards.contains?(deck, "Ace of Spades")
         true
+
   """
   def contains?(deck, card) do
     Enum.member?(deck, card)
@@ -44,6 +46,7 @@ defmodule Cards do
     The `hand_size` argument defines how many cards should be in the hand.
 
   ## Examples
+
         iex> deck = Cards.create_deck
         iex> {hand, deck} = Cards.deal(deck, 1)
         iex> hand
